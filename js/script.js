@@ -3,11 +3,11 @@ var AUTHENTICATION_BEGIN_MESSAGE = "Logging in...";
 var AUTHENTICATION_SUCCUESS_MESSAGE = ""; // Should never actually show.
 var AUTHENTICATION_FAILURE_MESSAGE = "Incorrect password";
 var PLACEHOLDER_COLOURS = [
-    '#FF6138',
+    '#00A388',
     '#FFFF9D',
     '#BEEB9F',
     '#79BD8F',
-    '#00A388',
+    '#FF6138',
 ];
 
 // Globals
@@ -354,8 +354,11 @@ $(document).ready(function () {
         finishAuthentication();
     };
 
+    $('#hostname').text(lightdm.hostname);
+
     // Ready to go! Fade in the login screen.
     $('body').animate({
         'opacity': '1'
     }, 400);
+
 });
